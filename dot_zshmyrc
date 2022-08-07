@@ -105,7 +105,7 @@ POWERLEVEL9K_DIR_SHOW_WRITABLE=true # For dir
 POWERLEVEL9K_VCS_HIDE_TAGS=true # for vcs
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
-source $ZSH/oh-my-zsh.sh
+[[ -n $ZSH_VERSION ]] && source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -136,7 +136,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export LESS=-FRX
-export PATH=$(go env GOPATH)/bin:/snap/bin:$PATH
+export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 
 alias ls='ls -GF'
 
