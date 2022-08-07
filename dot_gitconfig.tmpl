@@ -1,0 +1,35 @@
+[user]
+	name = Steven Velez
+	email = steven.velez@datadoghq.com
+[alias]
+	lol = log --oneline --graph --decorate
+	lob = log --oneline --graph --decorate --first-parent
+	co = checkout
+	st = status
+	lg1 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+#	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+#	helper = osxkeychain
+[pull]
+	rebase = true
+[merge]
+	conflictStyle = diff3
+	guitool = kdiff3
+[core]
+	editor = code --wait
+	hooksPath = /usr/local/dd/global_hooks
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[github]
+	user = svelez
+[init]
+	defaultBranch = main
