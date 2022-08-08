@@ -140,6 +140,11 @@ export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 
 alias ls='ls -GF'
 
+function export_vscode_ext() {
+	code --list-extensions --show-versions > $(chezmoi source-path)/.vscode_extensions
+}
+
+
 autoload -U +X bashcompinit && bashcompinit
 
 eval "$(direnv hook zsh)"

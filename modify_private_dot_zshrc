@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+function hasmyrc() {
+	while IFS='' read l; do
+		echo "$l"
+		if echo $l | grep .zshmyrc 2>&1 > /dev/null; then
+			return 0
+		fi
+	done
+	return 1
+}
+
+if hasmyrc; then
+	skip=1
+fi
+cat
+
+if [[ -z $skip ]]; then
+	echo source \$HOME/.zshmyrc
+fi
