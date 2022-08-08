@@ -4,10 +4,10 @@
 # Make sure homebrew is in the path
 # This needs to work in bash scripts run from chezmoi, so can't use
 # the omz plugin.
-for hb in /opt/homebrew /home/linuxbrew/.linuxbrew /usr/local; do 
+for hb in /opt/homebrew /home/linuxbrew/.linuxbrew /usr/local; do
 	hbbin="$hb/bin"
 	if [[ -x $hbbin/brew ]]; then
-		eval $(brew shellenv)
+		eval $($hbbin/brew shellenv)
 		break
 	fi
 done
