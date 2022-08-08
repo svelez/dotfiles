@@ -66,10 +66,10 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   asdf
+  direnv
   docker
   docker-compose
   git
-  git-hubflow
   github
   helm
   kubectl
@@ -146,5 +146,3 @@ function export_vscode_ext() {
 
 
 autoload -U +X bashcompinit && bashcompinit
-
-eval "$(direnv hook zsh)"
