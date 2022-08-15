@@ -4,7 +4,7 @@
 .oh-my-zsh/custom/themes/powerlevel10k/*.zwc
 
 {{ if ne .chezmoi.os "darwin" }}
-run_once_001_install_brew
-run_onchange_005_install_brew_packages.tmpl
+001_install_brew
+install_brew_packages
 Library
 {{ end }}
