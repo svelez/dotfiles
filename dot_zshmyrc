@@ -116,6 +116,9 @@ POWERLEVEL9K_DIR_SHOW_WRITABLE=true # For dir
 POWERLEVEL9K_VCS_HIDE_TAGS=true # for vcs
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
+# Support agent forwarding in the ssh-agent plugin
+zstyle :omz:plugins:ssh-agent agent-forwarding yes
+
 [[ -n $ZSH_VERSION ]] && source $ZSH/oh-my-zsh.sh
 
 # User configuration
