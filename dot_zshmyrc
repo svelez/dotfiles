@@ -91,37 +91,15 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-#
-# Prompt config
-#
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-  status
-  command_execution_time
-  root_indicator
-  background_jobs
-  # history
-  kubecontext
-  time
-  os_icon
-)
-
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰─$ "
-DEFAULT_USER=velezs # For context
-POWERLEVEL9K_STATUS_OK=false # For Status
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3 # For dir
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right # for dir
-POWERLEVEL9K_DIR_SHOW_WRITABLE=true # For dir
-POWERLEVEL9K_VCS_HIDE_TAGS=true # for vcs
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-
 # Support agent forwarding in the ssh-agent plugin
-zstyle :omz:plugins:ssh-agent agent-forwarding yes
+[[ -n $ZSH_VERSION ]] && zstyle :omz:plugins:ssh-agent agent-forwarding yes
 
 [[ -n $ZSH_VERSION ]] && source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -159,4 +137,4 @@ function export_vscode_ext() {
 }
 
 
-autoload -U +X bashcompinit && bashcompinit
+[[ -n $ZSH_VERSION ]] && autoload -U +X bashcompinit && bashcompinit
