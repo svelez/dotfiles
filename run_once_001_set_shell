@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ $SHELL != "zsh" ]]; then
+if [[ $(basename $SHELL) != "zsh" ]]; then
     echo "Making zsh the active shell"
     chsh -s $(command -v zsh)
 fi
