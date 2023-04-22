@@ -131,6 +131,7 @@ export LESS=-FRX
 export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 
 alias ls='ls -GF'
+alias staging-ws='tctx exec -c staging -- workspaces'
 
 function export_vscode_ext() {
 	code --list-extensions --show-versions > $(chezmoi source-path)/.vscode_extensions
@@ -139,3 +140,14 @@ function export_vscode_ext() {
 
 [[ -n $ZSH_VERSION ]] && autoload -U +X bashcompinit && bashcompinit
 [[ -n $ZSH_VERSION ]] && source ~/.iterm2_shell_integration.zsh
+
+
+#TODO: linuxify?
+if [[ command -v launchctl > /dev/null ]]; then
+	# Set SSH_AUTH_SOCK to the launchd-managed ssh-agent socket (com.openssh.ssh-agent).
+	export SSH_AUTH_SOCK=$(launchctl asuser $(id -u) launchctl getenv SSH_AUTH_SOCK)
+
+	# Load SSH keys from the keychain if keychain is empty.
+fi
+ssh-add -l > /dev/null || ssh-add --apple-load-keychain 2> /dev/null
+

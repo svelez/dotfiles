@@ -1,6 +1,7 @@
 [user]
 	name = Steven Velez
 	email = steven.velez@datadoghq.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzAXLvgHBsvbUNXBDIdv8gXMb/ctRAwbV3gdusj1sYv steven.velez+git-commit-signing@datadoghq.com
 [alias]
 	lol = log --oneline --graph --decorate
 	lob = log --oneline --graph --decorate --first-parent
@@ -16,7 +17,7 @@
 	conflictStyle = diff3
 	guitool = kdiff3
 [core]
-	editor = code --wait
+	editor = {{ if (ne (lookPath "code") "") }}code --wait{{ else }}vi{{ end }}
 	hooksPath = /usr/local/dd/global_hooks
 [fetch]
 	prune = true
@@ -35,3 +36,9 @@
 	user = svelez
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
