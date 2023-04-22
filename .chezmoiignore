@@ -8,3 +8,7 @@
 005_install_brew_packages
 Library
 {{ end }}
+
+{{ if eq (lookPath "apt-get") "" }}
+005_install_apt_packages
+{{ end }}

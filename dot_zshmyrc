@@ -132,6 +132,9 @@ export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 
 alias ls='ls -GF'
 alias staging-ws='tctx exec -c staging -- workspaces'
+if command -v batcat > /dev/null; then
+	alias bat='batcat'
+fi
 
 function export_vscode_ext() {
 	code --list-extensions --show-versions > $(chezmoi source-path)/.vscode_extensions
@@ -148,6 +151,6 @@ if  command -v launchctl > /dev/null; then
 	export SSH_AUTH_SOCK=$(launchctl asuser $(id -u) launchctl getenv SSH_AUTH_SOCK)
 
 	# Load SSH keys from the keychain if keychain is empty.
+	ssh-add -l > /dev/null || ssh-add --apple-load-keychain 2> /dev/null
 fi
-ssh-add -l > /dev/null || ssh-add --apple-load-keychain 2> /dev/null
 
