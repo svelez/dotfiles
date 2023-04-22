@@ -1,0 +1,8 @@
+admin-ctrlr:~/dd/dd-source/domains/eee/workspaces/apps/admission-controller
+devenv:~/dd/devtools/devenv
+devkube:~/dd/devtools/pex/devkube
+kg-worker:~/dd/dd-source/domains/eee/apps/sdp/temporal/workers/kg
+laptop-script:~/dd/devtools/laptop-ansible
+ws-cli:~/dd/dd-source/domains/eee/apps/sdp/temporal/cmd/workspaces
+ws-root:~/dd/dd-source/domains/eee/workspaces
+ws-worker:~/dd/dd-source/domains/eee/apps/sdp/temporal/workers/workspaces
