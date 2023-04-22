@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+{{- $keys := list "githubcli-archive-keyring.gpg" -}}
+{{- $gpgDir := joinPath .chezmoi.sourceDir ".gpg-keys" -}}
+{{- $gpgTarget := "/etc/apt/trusted.gpg.d" }}
+{{ range $keys }}
+# {{.}} hash: {{ include (joinPath $gpgDir . ) | sha256sum }}
+{{- end }}
+
+sudo install --compare --target {{ $gpgTarget }}
+{{- range $keys }} {{ joinPath $gpgDir . | quote }}
+{{- end }}
+
+echo "deb [arch={{ .chezmoi.arch }} signed-by={{ joinPath $gpgTarget "githubcli-archive-keyring.gpg" }}] https://cli.github.com/packages stable main" | 
+	sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
