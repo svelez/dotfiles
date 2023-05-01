@@ -132,6 +132,7 @@ export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 
 alias ls='ls -GF'
 alias staging-ws='tctx exec -c staging -- workspaces'
+alias gh-merged='git branch | sed -E -e "s/^\*//" | xargs -L 1 gh pr view --json headRefName,mergedAt 2> /dev/null | jq -r ". | select(.mergedAt) | .headRefName"'
 if command -v batcat > /dev/null; then
 	alias bat='batcat'
 fi
