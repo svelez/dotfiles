@@ -10,5 +10,6 @@ Library
 {{ end }}
 
 {{ if eq (lookPath "apt-get") "" }}
+001_update_apt_sources
 005_install_apt_packages
 {{ end }}
