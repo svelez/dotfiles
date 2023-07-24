@@ -137,6 +137,9 @@ alias gh-merged='git branch | sed -E -e "s/^\*//" | xargs -L 1 gh pr view --json
 if command -v batcat > /dev/null; then
 	alias bat='batcat'
 fi
+if [[ -e ~/dotfiles && -e ~/.local/bin/chezmoi ]]; then
+	alias chezmoi="$HOME/.local/bin/chezmoi -S $HOME/dotfiles"
+fi
 
 function export_vscode_ext() {
 	code --list-extensions --show-versions > $(chezmoi source-path)/.vscode_extensions
