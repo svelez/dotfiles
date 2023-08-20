@@ -4,7 +4,7 @@
 # -u: exit on unset variables
 set -eu
 
-evn > ~/env.duringsetup
+env > ~/env.duringsetup
 
 if ! chezmoi="$(command -v chezmoi)"; then
   bin_dir="${HOME}/.local/bin"
