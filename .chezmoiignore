@@ -15,3 +15,8 @@ Library
 001_update_apt_sources
 005_install_apt_packages
 {{ end }}
+
+
+{{ if eq (env "IN_WORKSPACE") "1" }}
+.gnupg/gpg-agent.conf
+{{ end }}
