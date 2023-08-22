@@ -17,6 +17,6 @@ Library
 {{ end }}
 
 
-{{ if eq (env "IN_WORKSPACE") "1" }}
-.gnupg/gpg-agent.conf
+{{ if ne (env "IN_WORKSPACE") "1" }}
+010_link_ws_gpg
 {{ end }}

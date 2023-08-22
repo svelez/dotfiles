@@ -130,9 +130,6 @@ plugins=(
 export LESS=-FRX
 export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 
-# Do not use workspace settings
-unset PASSWORD_STORE_GPG_OPTS
-
 alias ls='ls -GF'
 alias staging-ws='tctx exec -c staging -- workspaces'
 alias admin-ws-host='~/dd/dd-source/domains/eee/workspaces/scripts/admin-ws-host.sh'

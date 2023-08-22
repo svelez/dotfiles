@@ -1,0 +1,13 @@
+#/usr/bin/env bash
+
+WS_GPG_DIR=~/.config/password-store/gpg
+
+
+# Point the workspaces GPG dir at the one managed
+# by chezmoi... it doesn't seem to be possible
+# to globally change the pass gpg overrides for
+# all cases without modifying system files
+if [[ -d $WS_GPG_DIR ]]; then
+	rm -rf $WS_GPG_DIR
+	ln -s ~/.gnupg $WS_GPG_DIR
+fi
