@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 WS_GPG_DIR=~/.config/password-store/gpg
 
