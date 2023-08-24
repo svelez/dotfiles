@@ -130,6 +130,7 @@ plugins=(
 export LESS=-FRX
 export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
 export GITLAB_TOKEN=$(pass development/datadog/gltoken)
+export GITHUB_TOKEN=$(pass development/ghtoken)
 
 alias ls='ls -GF'
 alias staging-ws='tctx exec -c staging -- workspaces'
