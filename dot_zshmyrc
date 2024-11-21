@@ -141,6 +141,7 @@ alias staging-ws='atlas context exec -c staging -- workspaces'
 alias staging-ws-build='atlas context exec -c staging -- go run ~/dd/dd-source/domains/devex/workspaces/apps/cli'
 alias admin-ws-host='~/dd/dd-source/domains/devex/workspaces/scripts/admin-ws-host.sh'
 alias workspaces-create='workspaces create -r us-east-1 --dotfiles https://github.com/svelez/dotfiles --shell zsh'
+alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias gh-merged='git branch | sed -E -e "s/^\*//" | xargs -L 1 gh pr view --json headRefName,mergedAt 2> /dev/null | jq -r ". | select(.mergedAt) | .headRefName"'
 if command -v batcat > /dev/null; then
 	alias bat='batcat'
