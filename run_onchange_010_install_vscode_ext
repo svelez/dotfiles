@@ -5,5 +5,5 @@ source ~/.zshrc
 
 # extensions file hash: {{ include ".vscode_extensions" | sha256sum }}
 if command -V code  > /dev/null 2>&1; then
-    cat $(chezmoi source-path)/.vscode_extensions | xargs -L 1 code --install-extension
+    cat ${CHEZMOI_WORKING_TREE}/.vscode_extensions | xargs -L 1 code --install-extension
 fi
