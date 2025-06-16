@@ -1,0 +1,78 @@
+{
+    "editor.fontFamily": "Hack Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
+    "files.trimTrailingWhitespace": true,
+    "go.toolsManagement.autoUpdate": true,
+    "files.insertFinalNewline": true,
+    "workbench.colorTheme": "Solarized Dark",
+    "python.defaultInterpreterPath": "/Users/steven.velez/go/src/github.com/DataDog/devtools/pex/devkube/.direnv/python-3.10.10",
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "githubPullRequests.queries": [
+        {
+            "label": "Waiting For My Review",
+            "query": "repo:${owner}/${repository} is:open review-requested:${user}"
+        },
+        {
+            "label": "Assigned To Me",
+            "query": "repo:${owner}/${repository} is:open assignee:${user}"
+        },
+        {
+            "label": "Created By Me",
+            "query": "repo:${owner}/${repository} is:open author:${user}"
+        }
+    ],
+    "githubPullRequests.fileListLayout": "tree",
+    "githubPullRequests.pullBranch": "never",
+    "editor.minimap.enabled": false,
+    "remote.SSH.defaultExtensions": [
+        "bazelbuild.vscode-bazel",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "fabiospampinato.vscode-open-in-github",
+        "github.copilot",
+        "github.copilot-chat",
+        "github.vscode-pull-request-github",
+        "golang.go",
+        "hashicorp.hcl",
+        "hashicorp.terraform",
+        "ms-azuretools.vscode-docker",
+        "ms-python.debugpy",
+        "ms-python.isort",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-vscode-remote.remote-ssh-edit",
+        "ms-vscode.remote-explorer",
+        "starkwang.markdown",
+        "zxh404.vscode-proto3"
+    ],
+    "github.copilot.editor.enableAutoCompletions": true,
+    "datadog.telemetry.setup.enableTelemetry": "enabled",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command"
+    ],
+    "datadog.logs.events.notification.suppressGoEnableUISemanticTokensQuestion": true,
+    "workbench.startupEditor": "none",
+    "update.showReleaseNotes": false,
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "scminput"
+    ]
+}
