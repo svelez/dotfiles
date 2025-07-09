@@ -20,6 +20,7 @@ Library
 {{ if ne (env "IN_WORKSPACE") "1" }}
 # ignore outside of workspaces
 010_link_ws_gpg
+.local/bin/pbcopy
 {{ else }}
 # ignore in a workspace
 .gnupg/gpg-agent.conf
