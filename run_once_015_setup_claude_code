@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-if ! command -v npm > /dev/null; then
-    source ~/.zshrc
-fi
+# try to make sure installed tools can be reached even if
+# we haven't run the latest profile script yet
+export PATH=~/.volta/bin:~/.local/bin:$PATH
 
 if command -v claude > /dev/null; then
     echo "claude is already installed"

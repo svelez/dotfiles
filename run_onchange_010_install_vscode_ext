@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# make sure path is current
-source ~/.zshrc
+set -euo pipefail
+
+# try to make sure installed tools can be reached even if
+# we haven't run the latest profile script yet
+export PATH=~/.volta/bin:~/.local/bin:$PATH
 
 # extensions file hash: {{ include ".vscode_extensions" | sha256sum }}
 if command -V code  > /dev/null 2>&1; then
