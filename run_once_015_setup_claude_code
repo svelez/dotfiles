@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if ! command -v npm > /dev/null; then
+    source ~/.zshrc
+fi
+
+if command -v claude > /dev/null; then
+    echo "claude is already installed"
+    exit 0
+fi
+
+npm install -g @anthropic-ai/claude-code
