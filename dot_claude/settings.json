@@ -1,0 +1,4 @@
+{
+    "apiKeyHelper": "pass anthropic/apiKey1",
+    "forceLoginMethod": "console"
+}

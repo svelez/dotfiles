@@ -8,7 +8,9 @@ export PATH=~/.volta/bin:~/.local/bin:$PATH
 
 if command -v claude > /dev/null; then
     echo "claude is already installed"
-    exit 0
+else
+    npm install -g @anthropic-ai/claude-code
 fi
 
-npm install -g @anthropic-ai/claude-code
+# Set dark theme in Claude Code config
+claude config set theme dark
