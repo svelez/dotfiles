@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if command -v volta > /dev/null; then
+  echo "volta already installed"
+  exit 0
+fi
+
+bash "${CHEZMOI_WORKING_TREE}/.get.volta.sh"

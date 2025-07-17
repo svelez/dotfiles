@@ -13,7 +13,8 @@ Library
 
 {{ if eq (lookPath "apt-get") "" }}
 001_update_apt_sources
-005_install_apt_packages
+005_install_apt_package
+005_install_volta_linux
 {{ end }}
 
 
