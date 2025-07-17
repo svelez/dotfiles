@@ -2,4 +2,4 @@
 
 set -euo pipefail
 # we should have volta by now
-volta install node
+~/.volta/bin/volta install node
