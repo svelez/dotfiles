@@ -29,4 +29,4 @@ set -- init --apply --source="${script_dir}"
 
 echo "Running 'chezmoi $*'" >&2
 # exec: replace current process with chezmoi
-exec "$chezmoi" "$@" | tee -a ~/log.duringsetup
+exec "$chezmoi" "$@" 2>&1 | tee -a ~/log.duringsetup
