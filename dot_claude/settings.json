@@ -1,4 +1,4 @@
 {
-    "apiKeyHelper": "pass anthropic/apiKey1",
+    "apiKeyHelper": "abstract_pass.sh anthropic/apiKey1",
     "forceLoginMethod": "console"
 }

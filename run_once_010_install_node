@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+
+VLOC=~/.volta
+
+if command -v brew > /dev/null; then
+	VLOC=$(brew --prefix)
+fi
+
 # we should have volta by now
-~/.volta/bin/volta install node
+${VLOC}/bin/volta install node

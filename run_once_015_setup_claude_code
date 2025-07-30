@@ -13,4 +13,4 @@ else
 fi
 
 # Set dark theme in Claude Code config
-claude config set theme dark
+claude config set --global theme dark

@@ -74,5 +74,15 @@
     "cursor.cpp.disabledLanguages": [
         "plaintext",
         "scminput"
-    ]
+    ],
+    "remote.SSH.remotePlatform": {
+        "workspace-sbv-dd-otcto-sts": "linux",
+        "workspace-sbv-capture-history": "linux",
+        "workspace-sbv-check-extension-install": "linux",
+        "workspace-sbv-df-tester2": "linux",
+        "workspace-sbv-demo": "linux",
+        "workspace-sbv-with-claud": "linux"
+    },
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "git.blame.editorDecoration.enabled": false
 }

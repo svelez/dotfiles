@@ -133,7 +133,7 @@ function update_tokens() {
 }
 
 export LESS=-FRX
-export PATH=$(go env GOPATH)/bin:~/bin:/snap/bin:$PATH
+export PATH=$(go env GOPATH)/bin:~/bin:~/.volta/bin:/snap/bin:$PATH
 update_tokens
 
 alias ls='ls -GF'
