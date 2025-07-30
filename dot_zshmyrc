@@ -128,8 +128,8 @@ plugins=(
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 function update_tokens() {
-	export GITLAB_TOKEN=$(pass development/datadog/gltoken)
-	export GITHUB_TOKEN=$(pass development/ghtoken)
+	export GITLAB_TOKEN=$(abstract_pass.sh development/datadog/gltoken)
+	export GITHUB_TOKEN=$(abstract_pass.sh development/ghtoken)
 }
 
 export LESS=-FRX
