@@ -75,7 +75,7 @@ try_pass "$IDENTIFIER" ||
 (
     echo "Secret '$IDENTIFIER' not found in any of the configured sources" >&2
     echo "Tried:" >&2
-    local upper_id="${IDENTIFIER^^}"
+    upper_id="${IDENTIFIER^^}"
     echo "  1. Workspaces secrets: /run/user/$(id -u)/secrets/${upper_id//\//_}" >&2
     echo "  2. Pass password manager: $IDENTIFIER" >&2
     echo "  3. Apple Keychain: $IDENTIFIER" >&2
