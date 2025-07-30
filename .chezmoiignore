@@ -25,4 +25,5 @@ Library
 {{ else }}
 # ignore in a workspace
 .gnupg/gpg-agent.conf
+.password-store/.gpg-id
 {{ end }}
