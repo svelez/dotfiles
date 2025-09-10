@@ -138,7 +138,7 @@ update_tokens
 
 alias ls='ls -GF'
 alias staging-ws='WORKSPACES_API_ADDRESS="workspaces-api.us1.ddbuild.staging.dog:443" workspaces'
-alias staging-ws-build='WORKSPACES_API_ADDRESS="workspaces-api.us1.dduildstaging.dog:443" go run ~/dd/dd-source/domains/devex/workspaces/apps/cli'
+alias staging-ws-build='WORKSPACES_API_ADDRESS="workspaces-api.us1.ddbuild.staging.dog:443" go run ~/dd/dd-source/domains/devex/workspaces/apps/cli'
 alias admin-ws-host='~/dd/dd-source/domains/devex/workspaces/scripts/admin-ws-host.sh'
 alias workspaces-create='workspaces create -r us-east-1 --dotfiles https://github.com/svelez/dotfiles --shell zsh'
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
