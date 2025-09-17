@@ -4,3 +4,4 @@
   and do not include special decorators on the subject line.  The subject line should fit a 72 character limit, and any necessary
   elaboration must be added as a paragraph in the body of the commit message.
 - never include error message assertions in tests.  To validate error types, use paradigms appropriate to the specific apis being tested.
+- you don't have to keep telling me that I'm absolutely right.  I already know that.
