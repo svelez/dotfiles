@@ -22,6 +22,10 @@
     },
     "githubPullRequests.queries": [
         {
+            "label": "Local Pull Request Branches",
+            "query": "default"
+        },
+        {
             "label": "Waiting For My Review",
             "query": "repo:${owner}/${repository} is:open review-requested:${user}"
         },
@@ -32,6 +36,10 @@
         {
             "label": "Created By Me",
             "query": "repo:${owner}/${repository} is:open author:${user}"
+        },
+        {
+            "label": "All Open",
+            "query": "default"
         }
     ],
     "githubPullRequests.fileListLayout": "tree",
@@ -81,8 +89,41 @@
         "workspace-sbv-check-extension-install": "linux",
         "workspace-sbv-df-tester2": "linux",
         "workspace-sbv-demo": "linux",
-        "workspace-sbv-with-claud": "linux"
+        "workspace-sbv-with-claud": "linux",
+        "workspace-steven-velez-29341": "linux",
+        "workspace-sbv-main": "linux",
+        "workspace-sbv-training": "linux",
+        "workspace-sbv-check-build": "linux",
+        "workspace-sbv-build-ami": "linux",
+        "workspace-sbv-driveline-test-m7": "linux",
+        "workspace-sbv-start-ai-tool": "linux",
+        "workspace-sbv-oncall2": "linux",
+        "workspace-sbv-continue-ai-tool": "linux",
+        "workspace-sbv-improve-agent-reporting": "linux",
+        "workspace-sbv-check-prebuild": "linux",
+        "workspace-steven-velez-ami-003dfbf7b6dc1cf6b-check": "linux",
+        "workspace-sbv-solve-proxy-issue": "linux",
+        "workspace-sbv-finalize-kennel-mvp": "linux",
+        "workspace-sbv-setup-ai-kennel-deployment": "linux",
+        "workspace-sbv-test-dogweb-init": "linux",
+        "workspace-sbv-try-dw": "linux",
+        "workspace-sbv-proxy-for-bzl-metrics": "linux",
+        "workspace-sbv-check-default": "linux",
+        "workspace-sbv-check-ws": "linux",
+        "workspace-sbv-pr-testing": "linux",
+        "workspace-sbv-config-taskapi-tracing": "linux",
+        "workspace-sbv-ai-workshop": "linux",
+        "workspace-sbv-stop-auto-merge-prebuilds": "linux",
+        "workspace-sbv-auth-poc": "linux",
+        "workspace-sbv-test": "linux",
+        "workspace-sbv-test-vscode-fish": "linux",
+        "workspace-sbv-no-kennel-auth": "linux",
+        "workspace-sbv-fix-dogweb": "linux",
+        "workspace-sbv-advent-of-ai": "linux",
+        "workspace-sbv-fix-bazel-in-base-feature": "linux",
+        "workspace-sbv-init-devkube": "linux"
     },
     "workbench.preferredDarkColorTheme": "Solarized Dark",
-    "git.blame.editorDecoration.enabled": false
+    "git.blame.editorDecoration.enabled": false,
+    "remote.autoForwardPortsSource": "hybrid"
 }
