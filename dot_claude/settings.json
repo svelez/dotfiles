@@ -1,5 +1,0 @@
-{
-    "apiKeyHelper": "abstract_pass.sh anthropic/apiKey1",
-    "forceLoginMethod": "console",
-    "model": "sonnet"
-}

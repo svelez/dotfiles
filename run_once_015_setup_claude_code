@@ -2,15 +2,8 @@
 
 set -euo pipefail
 
-# try to make sure installed tools can be reached even if
-# we haven't run the latest profile script yet
-export PATH=~/.volta/bin:~/.local/bin:$PATH
-
 if command -v claude > /dev/null; then
     echo "claude is already installed"
 else
-    npm install -g @anthropic-ai/claude-code
+    bash "${CHEZMOI_WORKING_TREE}/.get.claude.sh"
 fi
-
-# Set dark theme in Claude Code config
-claude config set --global theme dark

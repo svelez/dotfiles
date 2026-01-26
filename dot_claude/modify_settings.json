@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Use existing file in case there are some centrally managed settings
+infile=$(cat)
+
+# But handle the case where there isn't
+if [[ -z "$infile" ]]; then
+  infile='{}'
+fi
+
+# Make sure to use key helper
+echo "$infile" | jq '.apiKeyHelper = "abstract_pass.sh anthropic/apiKey1"'
