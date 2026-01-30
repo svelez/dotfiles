@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+tfile=$(mktemp)
+trap "rm -rf '$tfile'" EXIT
+
+function gitconfig() {
+	git config -f "$tfile" "$@"
+}
+
+cat > "$tfile"
+
+gitconfig user.name "Steven Velez"
+gitconfig user.email "steven.velez@datadoghq.com"
+gitconfig user.signingkey "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzAXLvgHBsvbUNXBDIdv8gXMb/ctRAwbV3gdusj1sYv steven.velez+git-commit-signing@datadoghq.com"
+gitconfig github.user "svelez"
+
+gitconfig alias.lol "log --oneline --graph --decorate"
+gitconfig alias.lob "log --oneline --graph --decorate --first-parent"
+gitconfig alias.co "checkout"
+gitconfig alias.st "status"
+gitconfig alias.lg1 "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+gitconfig pull.rebase "true"
+
+gitconfig merge.conflictStyle "diff3"
+gitconfig merge.guitool "kdiff3"
+
+ed=vim
+if command -v code > /dev/null; then
+	ed="code --wait"
+fi
+gitconfig core.editor "$ed"
+
+gitconfig fetch.prune "true"
+
+gitconfig rerere.enabled "true"
+
+if command -v git-lfs > /dev/null; then
+	gitconfig filter.lfs.clean "git-lfs clean -- %f"
+	gitconfig filter.lfs.smudge "git-lfs smudge -- %f"
+	gitconfig filter.lfs.process "git-lfs filter-process"
+	gitconfig filter.lfs.required "true"
+fi
+
+gitconfig url.git@github.com:DataDog/.insteadOf "https://github.com/DataDog/"
+gitconfig url.git@github.com:svelez/.insteadOf "https://github.com/svelez/"
+
+gitconfig init.defaultBranch "main"
+
+gitconfig commit.gpgsign "true"
+
+gitconfig gpg.format "ssh"
+gitconfig gpg.ssh.allowedSignersFile "$HOME/.ssh/allowed_signers"
+
+cat "$tfile"
