@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-{{- $keys := list "githubcli-archive-keyring.gpg" -}}
+{{- $keys := list "githubcli-archive-keyring.gpg" "wezterm-fury.gpg" -}}
 {{- $gpgDir := joinPath .chezmoi.sourceDir ".gpg-keys" -}}
 {{- $gpgTarget := "/etc/apt/trusted.gpg.d" }}
 {{ range $keys }}
@@ -13,3 +13,6 @@ sudo install --compare --target {{ $gpgTarget }}
 
 echo "deb [arch={{ .chezmoi.arch }} signed-by={{ joinPath $gpgTarget "githubcli-archive-keyring.gpg" }}] https://cli.github.com/packages stable main" | 
 	sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+echo echo 'deb [signed-by={{ joinPath $gpgTarget "wezterm-fury.gpg" }}] https://apt.fury.io/wez/ * *' |
+	sudo tee /etc/apt/sources.list.d/wezterm.list > /dev/null
