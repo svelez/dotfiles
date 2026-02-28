@@ -44,7 +44,6 @@
     ],
     "githubPullRequests.fileListLayout": "tree",
     "githubPullRequests.pullBranch": "never",
-    "editor.minimap.enabled": false,
     "remote.SSH.defaultExtensions": [
         "bazelbuild.vscode-bazel",
         "dbaeumer.vscode-eslint",
@@ -121,9 +120,33 @@
         "workspace-sbv-fix-dogweb": "linux",
         "workspace-sbv-advent-of-ai": "linux",
         "workspace-sbv-fix-bazel-in-base-feature": "linux",
-        "workspace-sbv-init-devkube": "linux"
+        "workspace-sbv-init-devkube": "linux",
+        "workspace-sbv-check-instructions": "linux",
+        "workspace-sbv-check-instructions2": "linux",
+        "workspace-sbv-check-instructions3": "linux",
+        "workspace-sbv-reviewing": "linux",
+        "workspace-sbv-fix-base": "linux",
+        "workspace-sbv-resume-split": "linux",
+        "workspace-sbv-staging-iid": "linux",
+        "workspace-sbv-check-latest": "linux",
+        "workspace-sbv-orgsplit-ami": "linux",
+        "workspace-sb-check-gh": "linux",
+        "workspace-sbv-ami-orgsplit": "linux",
+        "workspace-sbv-concurrent-testing": "linux",
+        "workspace-sbv-test-ddhq": "linux",
+        "workspace-sbv-ws-concurrent-testing": "linux",
+        "workspace-sbv-taining": "linux",
+        "workspace-sbv-check-ddtool": "linux",
+        "workspace-sbv-claude-configging": "linux",
+        "sbv-auth-coding.workspace.infra.dog": "linux",
+        "workspace-sbv-auth-coding": "linux"
     },
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "git.blame.editorDecoration.enabled": false,
-    "remote.autoForwardPortsSource": "hybrid"
+    "remote.autoForwardPortsSource": "hybrid",
+    "datadog.telemetry.notification.suppressAgentObservabilityMessage": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "datadog.connection.notification.suppressSignInNotification": true,
+    "claudeCode.preferredLocation": "panel",
+    "workbench.editor.enablePreview": false
 }
