@@ -168,3 +168,10 @@ if  command -v launchctl > /dev/null; then
 	ssh-add -l > /dev/null || ssh-add --apple-load-keychain 2> /dev/null
 fi
 
+
+if command -v caffeinate > /dev/null; then
+	_real_ssh=$(command -v ssh)
+	function ssh() {
+		caffeinate "$_real_ssh" "$@"
+	}
+fi
