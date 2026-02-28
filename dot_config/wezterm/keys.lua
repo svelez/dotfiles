@@ -69,17 +69,20 @@ function module.apply_to_config(config)
 		-- emulate default tmux pane splitting
 		{
 			key = '%',
-			mods = 'LEADER|SHIFT',
+			mods = 'LEADER',
 			action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
 		},
 		{
 			key = '"',
-			mods = 'LEADER|SHIFT',
+			mods = 'LEADER',
 			action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
 		},
 	}
 
 	-- emulate default tmux pane nav
+	if config.key_tables == nil then
+		config.key_tables = {}
+	end
 	do_nav(config)
 	do_resize(config)
 end

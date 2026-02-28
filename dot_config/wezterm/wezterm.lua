@@ -3,6 +3,7 @@ local wezterm = require 'wezterm'
 
 -- and local helper modules
 local keys = require 'keys'
+local status = require 'status'
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -27,11 +28,18 @@ config.window_padding = {
 	bottom = '1cell',
 }
 config.window_decorations = 'RESIZE'
+config.window_frame = {
+	font_size = 14,
+}
 -- config.hide_tab_bar_if_only_one_tab = true
 
+-- General settings
+-- Supposedly, the only backend that supports agent forwarding
+-- config.ssh_backend = "Ssh2"
+
 --- External config
-config.key_tables = {}
 keys.apply_to_config(config)
+status.set(config)
 
 -- Finally, return the configuration to wezterm:
 return config
