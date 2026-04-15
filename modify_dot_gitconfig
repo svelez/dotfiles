@@ -55,5 +55,7 @@ gitconfig gpg.format "ssh"
 gitconfig gpg.ssh.allowedSignersFile "$HOME/.ssh/allowed_signers"
 
 gitconfig include.path "$HOME/.config/datadog/git/config"
+gitconfig "includeif.hasconfig:remote.*.url:git@github.com:svelez/**.path" "$HOME/.config/datadog/git/config-datadog"
+gitconfig "includeif.hasconfig:remote.*.url:https://github.com/svelez/**.path" "$HOME/.config/datadog/git/config-datadog"
 
 cat "$tfile"
