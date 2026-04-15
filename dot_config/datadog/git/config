@@ -10,6 +10,9 @@
 [includeIf "hasconfig:remote.*.url:https://github.com/DataDog/**"]
   path = ./config-datadog
 
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/DataDog/**"]
+  path = ./config-datadog
+
 # extra-orgs: datadog-labs → datadog
 [url "git@github.com:datadog-labs/"]
   insteadOf = https://github.com/datadog-labs/
@@ -18,6 +21,9 @@
   path = ./config-datadog
 
 [includeIf "hasconfig:remote.*.url:https://github.com/datadog-labs/**"]
+  path = ./config-datadog
+
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/datadog-labs/**"]
   path = ./config-datadog
 
 [url "git@github.com:ddoghq/"]
@@ -29,6 +35,9 @@
 [includeIf "hasconfig:remote.*.url:https://github.com/ddoghq/**"]
   path = ./config-ddoghq
 
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq/**"]
+  path = ./config-ddoghq
+
 # extra-orgs: ddoghq-sandbox → ddoghq
 [url "git@github.com:ddoghq-sandbox/"]
   insteadOf = https://github.com/ddoghq-sandbox/
@@ -37,4 +46,7 @@
   path = ./config-ddoghq
 
 [includeIf "hasconfig:remote.*.url:https://github.com/ddoghq-sandbox/**"]
+  path = ./config-ddoghq
+
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq-sandbox/**"]
   path = ./config-ddoghq
