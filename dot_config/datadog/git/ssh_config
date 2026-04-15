@@ -1,0 +1,17 @@
+# Managed by git-config-tool — DO NOT EDIT
+
+Host github-datadog
+  HostName github.com
+  IdentitiesOnly yes
+  IdentityFile /Users/steven.velez/.config/datadog/git/pubkeys/datadog-66044815.ghkey.pub
+  ControlMaster auto
+  ControlPath /tmp/gct-%i-%r@%h:%p-datadog
+  ControlPersist 600
+
+Host github-ddoghq
+  HostName github.com
+  IdentitiesOnly yes
+  IdentityFile /Users/steven.velez/.config/datadog/git/pubkeys/ddoghq-139833600.ghkey.pub
+  ControlMaster auto
+  ControlPath /tmp/gct-%i-%r@%h:%p-ddoghq
+  ControlPersist 600

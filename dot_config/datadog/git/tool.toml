@@ -1,0 +1,25 @@
+# git-config-tool configuration
+#
+# This file drives the rendering of ~/.config/datadog/git/config.
+# Edit this file and re-run `git-config-tool setup` to apply changes.
+#
+# [identity.<slug>]
+#   extra-orgs   List of additional GitHub orgs that share this identity.
+#   email        Override the auto-discovered email for this identity.
+#
+# [ssh]
+#   control-master   Enable ControlMaster in SSH scripts for connection
+#                    multiplexing (default: true). Set to false to disable.
+#
+# See the full list of datadog-inc orgs at:
+# https://github.com/enterprises/datadog-inc/organizations
+use-1password-agent = true
+
+[ssh]
+control-master = true
+
+[identity.datadog]
+extra-orgs = ["datadog-labs"]
+
+[identity.ddoghq]
+extra-orgs = ["ddoghq-sandbox"]

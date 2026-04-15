@@ -54,4 +54,6 @@ gitconfig commit.gpgsign "true"
 gitconfig gpg.format "ssh"
 gitconfig gpg.ssh.allowedSignersFile "$HOME/.ssh/allowed_signers"
 
+gitconfig include.path "$HOME/.config/datadog/git/config"
+
 cat "$tfile"

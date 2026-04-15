@@ -1,0 +1,9 @@
+# Managed by git-config-tool — DO NOT EDIT
+# Re-run `git-config-tool setup` to regenerate.
+
+[user]
+  name = svelez
+  email = steven.velez@datadoghq.com
+
+[core]
+  sshCommand = ${XDG_CONFIG_HOME:-$HOME/.config}/datadog/git/ssh-datadog.sh
