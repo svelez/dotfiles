@@ -60,6 +60,17 @@ end
 function module.apply_to_config(config)
 	config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1500 }
 	config.keys = {
+		-- Reposition tabs
+		{
+			key = '[',
+			mods = 'CTRL',
+			action = wezterm.action.MoveTabRelative(-1),
+		},
+		{
+			key = ']',
+			mods = 'CTRL',
+			action = wezterm.action.MoveTabRelative(1),
+		},
 		-- forward leader key
 		{
 			key = 'a',
