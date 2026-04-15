@@ -157,7 +157,8 @@ function export_vscode_ext() {
 
 [[ -n $ZSH_VERSION ]] && autoload -U +X bashcompinit && bashcompinit
 [[ -n $ZSH_VERSION ]] && source ~/.iterm2_shell_integration.zsh
-source ~/.config/zsh/wezterm.sh
+[[ -n $WEZTERM_EXECUTABLE ]] && source ~/.config/zsh/wezterm.sh
+
 
 #TODO: linuxify?
 if  command -v launchctl > /dev/null; then
@@ -172,6 +173,6 @@ fi
 if command -v caffeinate > /dev/null; then
 	_real_ssh=$(command -v ssh)
 	function ssh() {
-		caffeinate "$_real_ssh" "$@"
+		caffeinate "$_real_ssh" -t "$@"
 	}
 fi
