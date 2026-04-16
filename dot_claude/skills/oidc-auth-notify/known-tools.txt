@@ -1,6 +1,0 @@
-ddr
-ddtool
-dogbrew
-bzl
-mosaic
-rapid
