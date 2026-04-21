@@ -1,17 +1,17 @@
 # Managed by git-config-tool — DO NOT EDIT
+# Re-run `git-config-tool setup` to regenerate.
 
-Host github-datadog
-  HostName github.com
+Host github.com
   IdentitiesOnly yes
-  IdentityFile /Users/steven.velez/.config/datadog/git/pubkeys/datadog-66044815.ghkey.pub
+  IdentityFile ~/.config/datadog/git/pubkeys/datadog-66044815.ghkey.pub
   ControlMaster auto
-  ControlPath /tmp/gct-%i-%r@%h:%p-datadog
+  ControlPath /tmp/gct-github.com-%r@%h:%p
   ControlPersist 600
 
-Host github-ddoghq
+Host ddoghq.github.com
   HostName github.com
   IdentitiesOnly yes
-  IdentityFile /Users/steven.velez/.config/datadog/git/pubkeys/ddoghq-139833600.ghkey.pub
+  IdentityFile ~/.config/datadog/git/pubkeys/ddoghq-139833600.ghkey.pub
   ControlMaster auto
-  ControlPath /tmp/gct-%i-%r@%h:%p-ddoghq
+  ControlPath /tmp/gct-ddoghq.github.com-%r@%h:%p
   ControlPersist 600

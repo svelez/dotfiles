@@ -1,25 +1,34 @@
+# Set by setup — don't edit by hand.
+setup-version = "2.0.0"
+
 # git-config-tool configuration
 #
 # This file drives the rendering of ~/.config/datadog/git/config.
 # Edit this file and re-run `git-config-tool setup` to apply changes.
 #
-# [identity.<slug>]
-#   extra-orgs   List of additional GitHub orgs that share this identity.
-#   email        Override the auto-discovered email for this identity.
+# Top-level identity overrides (optional):
+#   name   Override the discovered display name for commits.
+#   email  Override the discovered @datadoghq.com email for commits.
+#
+# Top-level feature toggles (optional; written by setup on first run):
+#   use-1password-agent   Manage SSH keys via the 1Password agent.
+#                         Set false to skip 1Password setup and manage
+#                         your own agent and keys.
+#   manage-signing        Configure SSH-based commit signing.
+#                         Set false to skip signing setup entirely.
+#
+# [orgs.ddoghq]
+#   extra-orgs   Additional GitHub orgs that should route through the
+#                ddoghq identity (ssh_config alias + URL rewrites).
 #
 # [ssh]
-#   control-master   Enable ControlMaster in SSH scripts for connection
-#                    multiplexing (default: true). Set to false to disable.
-#
-# See the full list of datadog-inc orgs at:
-# https://github.com/enterprises/datadog-inc/organizations
+#   control-master   Enable ControlMaster in ssh_config (default: true).
+
 use-1password-agent = true
+manage-signing = true
 
 [ssh]
 control-master = true
 
-[identity.datadog]
-extra-orgs = ["datadog-labs"]
-
-[identity.ddoghq]
+[orgs.ddoghq]
 extra-orgs = ["ddoghq-sandbox"]

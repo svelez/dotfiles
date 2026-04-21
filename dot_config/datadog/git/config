@@ -1,52 +1,34 @@
 # Managed by git-config-tool — DO NOT EDIT
 # Re-run `git-config-tool setup` to regenerate.
 
+# Force SSH for HTTPS clones of DataDog.
 [url "git@github.com:DataDog/"]
   insteadOf = https://github.com/DataDog/
 
-[includeIf "hasconfig:remote.*.url:git@github.com:DataDog/**"]
-  path = ./config-datadog
-
-[includeIf "hasconfig:remote.*.url:https://github.com/DataDog/**"]
-  path = ./config-datadog
-
-[includeIf "hasconfig:remote.*.url:ssh://git@github.com/DataDog/**"]
-  path = ./config-datadog
-
-# extra-orgs: datadog-labs → datadog
-[url "git@github.com:datadog-labs/"]
-  insteadOf = https://github.com/datadog-labs/
-
-[includeIf "hasconfig:remote.*.url:git@github.com:datadog-labs/**"]
-  path = ./config-datadog
-
-[includeIf "hasconfig:remote.*.url:https://github.com/datadog-labs/**"]
-  path = ./config-datadog
-
-[includeIf "hasconfig:remote.*.url:ssh://git@github.com/datadog-labs/**"]
-  path = ./config-datadog
-
-[url "git@github.com:ddoghq/"]
+# Route ddoghq-managed orgs through the ddoghq.github.com alias.
+[url "git@ddoghq.github.com:ddoghq/"]
+  insteadOf = git@github.com:ddoghq/
   insteadOf = https://github.com/ddoghq/
+  insteadOf = ssh://git@github.com/ddoghq/
 
-[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq/**"]
-  path = ./config-ddoghq
-
-[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq/**"]
-  path = ./config-ddoghq
-
-[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq/**"]
-  path = ./config-ddoghq
-
-# extra-orgs: ddoghq-sandbox → ddoghq
-[url "git@github.com:ddoghq-sandbox/"]
+[url "git@ddoghq.github.com:ddoghq-sandbox/"]
+  insteadOf = git@github.com:ddoghq-sandbox/
   insteadOf = https://github.com/ddoghq-sandbox/
+  insteadOf = ssh://git@github.com/ddoghq-sandbox/
 
-[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq-sandbox/**"]
-  path = ./config-ddoghq
+[user]
+  name = Steven Velez
+  email = steven.velez@datadoghq.com
+  signingKey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzAXLvgHBsvbUNXBDIdv8gXMb/ctRAwbV3gdusj1sYv
 
-[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq-sandbox/**"]
-  path = ./config-ddoghq
+[gpg]
+  format = ssh
 
-[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq-sandbox/**"]
-  path = ./config-ddoghq
+[gpg "ssh"]
+  allowedSignersFile = ~/.config/datadog/git/allowed-signers
+
+[commit]
+  gpgSign = true
+
+[tag]
+  gpgSign = true
