@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+cfg=$(cat)
+
+echo $cfg
+
+
+if ! echo $cfg | grep -e "Include .*/\.config/datadog/git/ssh_config" 2>&1 > /dev/null; then
+	echo Include "~/.config/datadog/git/ssh_config"
+fi
