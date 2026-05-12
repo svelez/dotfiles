@@ -46,7 +46,7 @@ if [[ -o interactive ]]; then
       if [ -z "${iterm2_hostname:-}" ]; then
         _iterm2_hostname=$(hostname -f 2>/dev/null)
       fi
-      printf "\033]1337;RemoteHost=%s@%s\007" "$USER" "${_iterm2_hostname-}"
+      printf "\033]1337;RemoteHost=%s@%s\007" "$(id -un)" "${_iterm2_hostname-}"
       printf "\033]1337;CurrentDir=%s\007" "$PWD"
       iterm2_print_user_vars
     }

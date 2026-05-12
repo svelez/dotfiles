@@ -3,5 +3,5 @@ set -euo pipefail
 
 if [[ $(basename $SHELL) != "zsh" ]]; then
     echo "Making zsh the active shell"
-    sudo chsh -s $(command -v zsh) $USER
+    sudo chsh -s "$(command -v zsh)" "$(id -un)"
 fi

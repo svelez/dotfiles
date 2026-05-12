@@ -55,7 +55,7 @@ try_keychain() {
     if command -v security >/dev/null 2>&1; then
         # Try to find the password in keychain
         # Use the identifier as the service name and current user as account
-        if security find-generic-password -a "$USER" -s "$identifier" -w 2>/dev/null; then
+	if security find-generic-password -a "$(id -un)" -s "$identifier" -w 2>/dev/null; then
             return 0
         fi
 
