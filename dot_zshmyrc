@@ -129,11 +129,14 @@ plugins=(
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 function update_tokens() {
 	export GITLAB_TOKEN=$(abstract_pass.sh development/datadog/gltoken)
-	export GITHUB_TOKEN=$(abstract_pass.sh development/ghtoken)
 }
 
 export LESS=-FRX
-export PATH=$(go env GOPATH)/bin:~/.local/bin:~/bin:~/.volta/bin:/snap/bin:$PATH
+
+export PATH=~/.local/bin:~/bin:~/.volta/bin:/snap/bin:$PATH
+if command -v go >& /dev/null; then
+    export PATH=$(go env GOPATH)/bin:$PATH
+fi
 update_tokens
 
 alias ls='ls -GF'
