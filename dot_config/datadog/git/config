@@ -16,6 +16,11 @@
   insteadOf = https://github.com/ddoghq-sandbox/
   insteadOf = ssh://git@github.com/ddoghq-sandbox/
 
+[url "git@ddoghq.github.com:steven-velez_ddog/"]
+  insteadOf = git@github.com:steven-velez_ddog/
+  insteadOf = https://github.com/steven-velez_ddog/
+  insteadOf = ssh://git@github.com/steven-velez_ddog/
+
 [user]
   name = Steven Velez
   email = steven.velez@datadoghq.com

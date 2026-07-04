@@ -85,7 +85,7 @@ plugins=(
   helm
   kubectl
   wd
-  ssh-agent
+  # ssh-agent
 
   zsh-autosuggestions
   zsh-syntax-highlighting

@@ -139,14 +139,27 @@
         "workspace-sbv-check-ddtool": "linux",
         "workspace-sbv-claude-configging": "linux",
         "sbv-auth-coding.workspace.infra.dog": "linux",
-        "workspace-sbv-auth-coding": "linux"
+        "workspace-sbv-auth-coding": "linux",
+        "workspace-sbv-daemon-staging-support": "linux",
+        "workspace-sbv-benchmarking": "linux",
+        "workspace-sbv-change-storage": "linux",
+        "workspace-steven-velez-c5ad-8xlarge-20260423-1439": "linux",
+        "workspace-sbv-check-git": "linux",
+        "workspace-sbv-check-git-in-ws": "linux",
+        "workspace-sbv-working": "linux",
+        "local-mock-acws": "linux",
+        "workspace-sbv-check-ddg": "linux",
+        "workspace-sbv-update-base-feature": "linux",
+        "workspace-sbv-deploy-monitor": "linux",
+        "foobar": "linux"
     },
     "workbench.preferredDarkColorTheme": "Solarized Dark",
     "git.blame.editorDecoration.enabled": false,
     "remote.autoForwardPortsSource": "hybrid",
     "datadog.telemetry.notification.suppressAgentObservabilityMessage": true,
     "githubPullRequests.createOnPublishBranch": "never",
-    "datadog.connection.notification.suppressSignInNotification": true,
-    "claudeCode.preferredLocation": "panel",
-    "workbench.editor.enablePreview": false
+    "claudeCode.preferredLocation": "sidebar",
+    "workbench.editor.enablePreview": false,
+    "datadog.cursor.notification.suppressMcpMigrationMessage": true,
+    "window.autoDetectColorScheme": false
 }
