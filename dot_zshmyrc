@@ -160,7 +160,6 @@ function export_vscode_ext() {
 
 [[ -n $ZSH_VERSION ]] && autoload -U +X bashcompinit && bashcompinit
 [[ -n $ZSH_VERSION ]] && source ~/.iterm2_shell_integration.zsh
-[[ -n $WEZTERM_EXECUTABLE ]] && source ~/.config/zsh/wezterm.sh
 
 
 #TODO: linuxify?
@@ -179,3 +178,5 @@ if command -v caffeinate > /dev/null; then
 		caffeinate "$_real_ssh" -t "$@"
 	}
 fi
+
+source ~/.config/zsh/wezterm.sh
