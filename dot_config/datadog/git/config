@@ -22,7 +22,7 @@
   insteadOf = ssh://git@github.com/steven-velez_ddog/
 
 [user]
-  name = steven.velez
+  name = Steven Velez
   email = steven.velez@datadoghq.com
   signingKey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzAXLvgHBsvbUNXBDIdv8gXMb/ctRAwbV3gdusj1sYv
 
@@ -38,10 +38,39 @@
 [tag]
   gpgSign = true
 
-[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq/**"]
-    path = ~/.config/datadog/git/config-ddoghq
-[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq/**"]
-    path = ~/.config/datadog/git/config-ddoghq
-[includeIf "hasconfig:remote.*.url:git@github-enterprise:ddoghq/**"]
-    path = ~/.config/datadog/git/config-ddoghq
+# Sign commits in ddoghq repos with the ddoghq signing key.
+# GitHub verifies ddoghq signatures only against keys registered on
+# the ddoghq account, so the key above doesn't work there.
 
+[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:git@ddoghq.github.com:ddoghq/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:ssh://git@ddoghq.github.com/ddoghq/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+
+[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq-sandbox/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:git@ddoghq.github.com:ddoghq-sandbox/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq-sandbox/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/ddoghq-sandbox/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:ssh://git@ddoghq.github.com/ddoghq-sandbox/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+
+[includeIf "hasconfig:remote.*.url:git@github.com:steven-velez_ddog/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:git@ddoghq.github.com:steven-velez_ddog/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:https://github.com/steven-velez_ddog/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:ssh://git@github.com/steven-velez_ddog/**"]
+  path = ~/.config/datadog/git/config_ddoghq
+[includeIf "hasconfig:remote.*.url:ssh://git@ddoghq.github.com/steven-velez_ddog/**"]
+  path = ~/.config/datadog/git/config_ddoghq
