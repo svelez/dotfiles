@@ -22,7 +22,7 @@
   insteadOf = ssh://git@github.com/steven-velez_ddog/
 
 [user]
-  name = Steven Velez
+  name = steven.velez
   email = steven.velez@datadoghq.com
   signingKey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzAXLvgHBsvbUNXBDIdv8gXMb/ctRAwbV3gdusj1sYv
 
@@ -37,3 +37,11 @@
 
 [tag]
   gpgSign = true
+
+[includeIf "hasconfig:remote.*.url:git@github.com:ddoghq/**"]
+    path = ~/.config/datadog/git/config-ddoghq
+[includeIf "hasconfig:remote.*.url:https://github.com/ddoghq/**"]
+    path = ~/.config/datadog/git/config-ddoghq
+[includeIf "hasconfig:remote.*.url:git@github-enterprise:ddoghq/**"]
+    path = ~/.config/datadog/git/config-ddoghq
+
