@@ -1,3 +1,5 @@
+- when performing github operations, use the gh alias defined in the current shell rather than gh directlu
+  if the alias fails blocks with a login error, then present that to me to unblock it
 - when bazel needs to be invoked, use system's bzl wrapper instead of bazel directly, e.g., bzl run //... instead of bazel run //...
 - when writing tests using mockery-generated mocks, prefer using the mock's expector over the "On" function directly
 - when writing git commit messages, be clear and concise with the description of changes.  Do not include an itemized list of changes,
